@@ -1,0 +1,1 @@
+{"version":3,"sources":["src/js/preload.js"],"names":["console","log"],"mappings":"AAAAA,OAAO,CAACC,GAAR,CAAY,OAAZ","file":"preload.c140dfb0.js","sourceRoot":"..","sourcesContent":["console.log('hello') ;"]}
