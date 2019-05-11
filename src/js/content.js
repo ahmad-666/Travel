@@ -5,7 +5,31 @@ let text = document.querySelector('#text');
 let button = document.querySelector('#content button');
 let offset = parseInt(Math.min(window.innerWidth,window.innerHeight)/15) ; //amount of top animation(based on screen size) 
 let getStyle = (el,prop) => window.getComputedStyle(el,null).getPropertyValue(prop) ;
+let animeExecute = false ;
+window.addEventListener('resize',e=>{
+    if(animeExecute){
+        if(window.innerWidth<=600){
+            header.style.top = '2%';
+            title.style.top = '52%';
+            text.style.top = '63%';
+            button.style.top = '80%';
+        }
+        else if(window.innerWidth<=800){
+            header.style.top = '2%';
+            title.style.top = '30%';
+            text.style.top = '40%';
+            button.style.top = '60%';
+        }
+        else{
+            header.style.top = '2%';
+            title.style.top = '30%';
+            text.style.top = '42%';
+            button.style.top = '60%';
+        }
+    }
+})
 function animation(){
+    animeExecute = true ;
     const tl = anime.timeline({
         direction: 'normal',
         loop: 1

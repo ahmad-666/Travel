@@ -4,6 +4,7 @@ import '@babel/polyfill';
 import '../style/init.css' ;
 import '../style/preload.css' ;
 import '../style/content.css' ;
+import '../style/responsive.css' ;
 //load js files(async)------------------------------
 const scripts = {
     preload : import('./preload') ,
