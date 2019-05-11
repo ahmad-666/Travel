@@ -1,7 +1,12 @@
+@font-face{
+    font-family: roboto ;
+    src: url('../assets/fonts/Roboto-Regular.ttf') ;
+}
 #preload{
     width: 100%;
     height: 100%;
     position: relative ;
+    overflow: hidden;
 }
 .layer{
     width: 100%;
@@ -16,8 +21,8 @@
     background-color: rgb(40,40,40) ;
 }
 .img{
-    transform: scaleX(1) ;
     width: 0 ;
+    transform: scaleX(1) ;
     filter: grayscale(100%) ;
     background-position: center center ;
     background-repeat: no-repeat ;

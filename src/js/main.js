@@ -3,11 +3,14 @@ import '@babel/polyfill';
 //load css files---------------------------------
 import '../style/init.css' ;
 import '../style/preload.css' ;
+import '../style/content.css' ;
 //load js files(async)------------------------------
 const scripts = {
-    preload : import('./preload') 
+    preload : import('./preload') ,
+    content: import('./content')
 }
 async function loadScript(name){
     let script = await scripts[name] ;
 }
 loadScript('preload') ;
+loadScript('content') ;
