@@ -3,29 +3,25 @@ let header = document.querySelector('#header');
 let title = document.querySelector('#title');
 let text = document.querySelector('#text');
 let button = document.querySelector('#content button');
+let pic = document.querySelector('.pic');
 let offset = parseInt(Math.min(window.innerWidth,window.innerHeight)/15) ; //amount of top animation(based on screen size) 
 let getStyle = (el,prop) => window.getComputedStyle(el,null).getPropertyValue(prop) ;
 let animeExecute = false ;
 window.addEventListener('resize',e=>{
     if(animeExecute){
-        if(window.innerWidth<=600){
-            header.style.top = '2%';
-            title.style.top = '52%';
-            text.style.top = '63%';
-            button.style.top = '80%';
-        }
-        else if(window.innerWidth<=800){
-            header.style.top = '2%';
-            title.style.top = '30%';
-            text.style.top = '40%';
-            button.style.top = '60%';
-        }
-        else{
-            header.style.top = '2%';
-            title.style.top = '30%';
-            text.style.top = '42%';
-            button.style.top = '60%';
-        }
+      if(window.innerWidth<850){
+          title.style.top = '55%' ; 
+          text.style.top = '65%' ; 
+          button.style.top = '80%' ; 
+          pic.style.top = '15%' ; 
+      }
+      else{
+        header.style.top = '1em';
+        title.style.top = '30%' ; 
+        text.style.top = '42%' ; 
+        button.style.top = '60%' ; 
+        pic.style.top = '25%' ; 
+      }
     }
 })
 function animation(){

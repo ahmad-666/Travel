@@ -2,15 +2,15 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 module.exports="img.9cfb713d.jpg";
 },{}],"1SCp":[function(require,module,exports) {
 module.exports="loader1.41db9826.jpg";
-},{}],"5K1U":[function(require,module,exports) {
-module.exports="loader3.a51e902d.jpg";
 },{}],"zXX9":[function(require,module,exports) {
 module.exports="loader2.9b7725a0.jpg";
+},{}],"5K1U":[function(require,module,exports) {
+module.exports="loader3.a51e902d.jpg";
 },{}],"3ERL":[function(require,module,exports) {
-module.exports={img:{jpg:require("./img.jpg")},loader1:{jpg:require("./loader1.jpg")},loader3:{jpg:require("./loader3.jpg")},loader2:{jpg:require("./loader2.jpg")}};
-},{"./img.jpg":"QoxU","./loader1.jpg":"1SCp","./loader3.jpg":"5K1U","./loader2.jpg":"zXX9"}],"lIKP":[function(require,module,exports) {
+module.exports={img:{jpg:require("./img.jpg")},loader1:{jpg:require("./loader1.jpg")},loader2:{jpg:require("./loader2.jpg")},loader3:{jpg:require("./loader3.jpg")}};
+},{"./img.jpg":"QoxU","./loader1.jpg":"1SCp","./loader2.jpg":"zXX9","./loader3.jpg":"5K1U"}],"lIKP":[function(require,module,exports) {
 module.exports="modern.e9b9b1a2.ttf";
 },{}],"h7UP":[function(require,module,exports) {
 "use strict";var e=o(require("animejs/lib/anime.es")),t=o(require("../assets/imgs/*.*")),a=o(require("../assets/fonts/modern.ttf")),r=o(require("./content"));function o(e){return e&&e.__esModule?e:{default:e}}var n=[];for(var l in t.default)n.push(t.default[l].jpg);var u=new createjs.LoadQueue(!1),d=e.default.timeline({direction:"normal",loop:1});d.add({targets:".black",duration:1500,easing:"easeInQuad",scaleX:[0,1]},0),d.add({targets:".loader span",duration:700,delay:e.default.stagger(150),easing:"easeOutCubic",opacity:1,left:0,scale:[0,1]},1500),setTimeout(function(){n.forEach(function(e){u.loadFile(e)}),u.loadFile(a.default)},2600),u.on("complete",function(t){var a=document.querySelector(".img"),o=0;(0,e.default)({targets:a,easing:"linear",opacity:[{value:1,duration:300},{value:0,duration:300}],loop:!0,loopBegin:function(){a.style.backgroundImage="url(".concat(n[o],")"),o=o+1!=n.length?o+1:0}});var l=e.default.timeline({direction:"normal",loop:1});l.add({targets:".img",easing:"easeInQuad",width:"100%",duration:1500},0),l.add({targets:".orange",easing:"easeInOutCubic",scaleX:[0,1],duration:1e3,complete:function(){document.querySelector(".black").parentElement.removeChild(document.querySelector(".black")),document.querySelector(".img").parentElement.removeChild(document.querySelector(".img"))}},1500),l.add({targets:".loader span",duration:700,delay:e.default.stagger(150),easing:"easeOutCubic",opacity:0,left:[0,"-5em"],scale:[1,0]},2500),l.add({targets:".orange",easing:"easeInOutCubic",scaleX:{value:[1,0],duration:1e3,delay:1},transformOrigin:{value:"100% 50% 0",duration:1,delay:0},complete:function(){document.querySelector(".orange").parentElement.removeChild(document.querySelector(".orange")),document.querySelector(".loader").parentElement.removeChild(document.querySelector(".loader")),document.querySelector("#preload").parentElement.removeChild(document.querySelector("#preload")),document.querySelector("#wrapper").style.display="block",(0,r.default)()}},3e3)});
 },{"animejs/lib/anime.es":"tMTn","../assets/imgs/*.*":"3ERL","../assets/fonts/modern.ttf":"lIKP","./content":"i5HT"}]},{},[], null)
-//# sourceMappingURL=preload.b35d6fd5.js.map
+//# sourceMappingURL=preload.2120d3f2.js.map
