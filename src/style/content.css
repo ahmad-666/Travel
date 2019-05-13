@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
     position: relative ;
-    display: none ;
+    display: block ;
     overflow: hidden;
 }
 #content{
@@ -95,8 +95,8 @@
     cursor: pointer;
     position: relative ;
 }
-#content{width: 0 ;}
+/* #content{width: 0 ;}
 #content .pic > *{width: 0 ;}
 #content .pic {box-shadow: 0 0 0 0 transparent ;}
 #content > *:not(.pic){opacity: 0;}
-.icons > * {opacity: 0;}
+.icons > * {opacity: 0;} */

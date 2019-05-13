@@ -1,4 +1,19 @@
-@media screen and (max-width: 1500px) { 
+/*for big desktop(width>1500px) */
+@media screen and (min-width: 1600px) and (min-height:700px){}
+@media screen and (min-width: 1600px) and (max-height:700px){
+    #wrapper{height: 140vh;}
+}
+@media screen and (min-width: 1600px) and (max-height:500px){
+    #wrapper{height: 200vh;}
+}
+/* ----------------------------------------------------
+----------------------------------------------------
+---------------------------------------------------- */
+/* for small desktop,laptop */
+/* ----------------------------------------------------
+----------------------------------------------------
+---------------------------------------------------- */
+@media screen and (max-width: 1600px) and (min-height:700px) { 
     html,body{font-size: 18px;}
     .pic{
         width: 30em ;
@@ -8,12 +23,28 @@
     }
     .fab,.fas{font-size: 1.2em;}
 }
-@media screen and (max-width: 1100px) { 
+@media screen and (max-width: 1600px) and (max-height:700px) {
+    html,body{font-size: 18px;}
+    .pic{
+        width: 30em ;
+        height: 20em;
+        top: 25% ;
+        left: 75%;
+    }
+    .fab,.fas{font-size: 1.2em;} 
+    #wrapper{height: 120vh;}
+}
+@media screen and (max-width: 1600px) and (max-height:500px) {
+    #wrapper{height: 160vh;}
+}
+/* for tablet(landscape) */
+/* ----------------------------------------------------
+----------------------------------------------------
+---------------------------------------------------- */
+@media screen and (max-width: 1100px) and (min-height:700px) { 
     html,body{font-size: 15px;}
     #title,#text,#content button{left: 10%;}
-    #header{
-        left: 1.5em;
-    }
+    #header{left: 1.5em;}
     .pic{
         width: 32em ;
         height: 24em;
@@ -21,7 +52,27 @@
         left: 72%;
     }
 }
-@media screen and (max-width: 850px) { 
+@media screen and (max-width: 1100px) and (max-height:700px) { 
+    html,body{font-size: 15px;}
+    #title,#text,#content button{left: 10%;}
+    #header{left: 1.5em;}
+    .pic{
+        width: 32em ;
+        height: 24em;
+        top: 25% ;
+        left: 72%;
+    }
+    #wrapper{height: 120vh;}
+} 
+@media screen and (max-width: 1100px) and (max-height:500px) { 
+    #wrapper{height: 150vh;}
+} 
+/* for tablet(portrait) , big mobile(landscape) */
+/* ----------------------------------------------------
+----------------------------------------------------
+---------------------------------------------------- */
+@media screen and (max-width: 850px) and (min-height:700px) { 
+    html,body{font-size: 11px;}
     .pic{
         width: 40em ;
         height: 25em;
@@ -29,33 +80,18 @@
         transform: translateX(-50%) ;
         top: 15%;
     }
-    #content > *:not(.pic){
-        left: 50vw;
-        transform: translateX(-50%);
-    }
-    #header{
-        font-size: 3em ;
-    }
-    #title{
-        font-size: 5em;
-        top: 55% ;
-    }
-    #text{
-        font-size: 1.5em ;
-        top: 65%;
-    }
+    #content > *:not(.pic){left: 50vw;transform: translateX(-50%);}
+    #header{font-size: 3em ;}
+    #title{font-size: 5em;top: 55% ;}
+    #text{font-size: 1.5em ;top: 65%;}
     #content button{
         width: 8em ;
         height: 4em;
         top: 80% ;
         font-size: 1.7em;
     }
-    .fas{
-        font-size: 2em ;
-    }
-    .fab{
-        font-size: 3em; 
-    }
+    .fas{font-size: 2em ;}
+    .fab{font-size: 3em; }
     .icons:nth-child(3){
         width: 100% ;
         flex-direction: row ;
@@ -65,17 +101,56 @@
         bottom: 2em;
     }
 }
-@media screen and (max-width: 850px) and (max-height: 500px){
-    #wrapper{
-        height: 300vh;
+
+@media screen and (max-width: 850px) and (max-height:700px) { 
+    html,body{font-size: 13px;}
+    .pic{
+        width: 40em ;
+        height: 25em;
+        left: 50vw;
+        transform: translateX(-50%) ;
+        top: 15%;
     }
-}
-@media screen and (max-width: 600px) { 
-    html,body{font-size: 7.5px;}
-}
-@media screen and (max-width:600px) and (max-height:450px){
-    #wrapper{
-        height: 170vh;
+    #content > *:not(.pic){left: 50vw;transform: translateX(-50%);}
+    #header{font-size: 3em ;}
+    #title{font-size: 5em;top: 55% ;}
+    #text{font-size: 1.5em ;top: 65%;}
+    #content button{
+        width: 8em ;
+        height: 4em;
+        top: 80% ;
+        font-size: 1.7em;
     }
+    .fas{font-size: 2em ;}
+    .fab{font-size: 3em; }
+    .icons:nth-child(3){
+        width: 100% ;
+        flex-direction: row ;
+        justify-content: space-around ;
+        align-items: center ;
+        flex-wrap: nowrap ;
+        bottom: 2em;
+    }
+    #wrapper{height:150vh;}
 }
 
+@media screen and (max-width: 850px) and (max-height: 500px){
+    #wrapper{height: 260vh;}
+}
+/* for small mobile(portrait,landscape) */
+/* ----------------------------------------------------
+----------------------------------------------------
+---------------------------------------------------- */
+@media screen and (max-width: 600px) and (min-height: 700px) { 
+    html,body{font-size: 12px;}
+}
+@media screen and (max-width: 600px) and (max-height: 700px) { 
+    html,body{font-size: 12px;}
+    #wrapper{height:150vh;}
+}
+@media screen and (max-width: 600px) and (max-height: 500px) { 
+    #wrapper{height:200vh;}
+}
+@media screen and (max-width: 600px) and (max-height: 380px) { 
+    #wrapper{height:270vh;}
+} 

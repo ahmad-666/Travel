@@ -2,7 +2,7 @@
 import '@babel/polyfill';
 //load css files---------------------------------
 import '../style/init.css' ;
-import '../style/preload.css' ;
+//import '../style/preload.css' ;
 import '../style/content.css' ;
 import '../style/responsive.css' ;
 //load js files(async)------------------------------
@@ -13,5 +13,5 @@ const scripts = {
 async function loadScript(name){
     let script = await scripts[name] ;
 }
-loadScript('preload') ;
+//loadScript('preload') ;
 loadScript('content') ;
